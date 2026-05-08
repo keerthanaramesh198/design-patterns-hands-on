@@ -4,8 +4,8 @@
 class NotificationStrategy
 {
     public:
+    virtual ~NotificationStrategy() = default;
     virtual void send()=0;
-    virtual ~NotificationStrategy() {}
 };
 
 #endif

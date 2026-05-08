@@ -3,8 +3,10 @@
 #include "SMSStrategy.hpp"
 #include "PushNotificStrategy.hpp"
 #include <string>
+#include <iostream>
+using namespace std;
 
-NotificationStrategy *NotificationFactory::create(string type)
+NotificationStrategy* NotificationFactory::create(string type)
 {
      if(type == "EMAIL"){
             return new EmailStrategy();
@@ -14,5 +16,6 @@ NotificationStrategy *NotificationFactory::create(string type)
             return new PushNotificStrategy();
         } else {
             cout<<"Type not available"<<endl;
+            return nullptr;
         }
 }
