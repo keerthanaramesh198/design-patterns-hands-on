@@ -8,5 +8,4 @@ int main(){
     EmailStrategy email;
     NotificationService notifyService(&email);
     notifyService.notify();
-
 }
